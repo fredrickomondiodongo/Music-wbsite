@@ -78,6 +78,7 @@ p{
 }
 .feature-img p{
     color: #707070;
+    text-align: center;
 }
 
 .small-img-row{
@@ -87,19 +88,18 @@ p{
     align-items: center;
     -o-border-radius: 6px;
     overflow: hidden;
-     /* width:550px;    */
     border-radius: 6px;
 }
 .small-img{
     position: relative;
-    
+    height: 100%;
+}
+.small-img img{
+    width: 160px;
 
     
 }
-.small-img img{
-    width: 150px;
-    
-}
+
 .small-img-row p{
     margin-left: 20px;
     color: #707070;

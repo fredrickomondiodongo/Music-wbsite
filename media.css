@@ -57,3 +57,21 @@
     height: 50px;
 }
 }
+
+@media (max-width:399px) {
+    .small-img-row{
+        flex-direction: column;
+    }
+    .small-img img{
+    width: 310px;   
+    }
+
+    .feature-img{
+    width: 94%;}
+}
+
+@media (max-width:316px) {
+.titlesong{
+    font-size: 12px;
+}
+}
