@@ -1,0 +1,1889 @@
+/******************************************************
+    Smaller than 1200px
+*******************************************************/
+
+@media screen and (max-width: 1200px) {
+    
+    .wrapper {
+        width: 960px;
+    }
+
+    /*-------------------------------------------*\
+        Main Header Styling
+    \*-------------------------------------------*/
+
+    #main-header, #main-header.stick-it {
+        position: relative !important;
+        width: 900px;
+        padding: 0 30px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.03);
+        animation: none;
+    }
+
+    #main-header.stick-it .main-header-inner-wrap {
+        width: 100%;
+    }
+
+    #menu-icon {
+        display: block;
+        width: 20px;
+        height: 100px;
+        color: #222;
+        float: left;
+        margin-right: 20px;
+        background: url(../images/menu-icon.svg) no-repeat center center;
+        cursor: pointer;
+        transition: opacity .3s;
+    }
+
+    .color-header #menu-icon {
+        background-image: url(../images/menu-icon-white.svg);
+    }
+
+    #main-nav {
+        position: absolute;
+        left: 20px;
+        top: 100px;
+        z-index: 1000;
+        display: none;
+        width: 318px;
+        height: auto;
+        border-radius: 0 0 10px 10px;
+        background-color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .color-header #main-nav a {
+        color: #222;
+    }
+
+    #main-nav li::before {
+        display: none;
+    }
+
+    #main-nav ul li ul {
+        border: none;
+        font-size: 14px;
+    }
+
+    #main-nav li,
+    #main-header.stick-it #main-nav li {
+        display: block;
+        width: 100%;
+        height: auto;
+        clear: both;
+        padding: 0;
+        border-bottom: 1px solid #eee;
+        line-height: 44px;
+    }
+
+    #main-nav li::after {
+        display: none;
+    }
+
+    #main-nav li:first-child {
+        margin-left: 0;
+    }
+
+    #main-nav li:last-child,
+    #main-header.stick-it #main-nav li:last-child {
+        border-bottom: none;
+    }
+
+    #main-nav a,
+    #main-header.stick-it #main-nav a {
+        height: auto;
+        padding: 14px 27px;
+        line-height: 25px;
+    }
+
+    #main-nav a::before {
+        left: 28px;
+        bottom: -1px;
+        height: 1px;
+    }
+
+    #main-nav .current-menu-item::after {
+        display: none;
+    }
+
+    .navbubble {
+        right: -14px;
+        top: 3px
+    }
+
+    #main-nav ul li ul a,
+    #main-header.stick-it #main-nav ul li ul a {
+        max-width: 100%;
+        min-width: 50%;
+        color: #222;
+        padding: 14px 47px 14px 35px;
+        line-height: 25px;
+    }
+
+    #main-nav .menu-item-has-children > a {
+        padding-right: 27px;
+    }
+
+    #main-nav .menu-item-has-children > a::after {
+        display: none !important;
+    }
+
+    #main-nav .menu-item-has-children > a::before {
+        display: none;
+    }
+
+    /*** Main Nav Drop Down Menu ***/
+    
+    #main-nav ul li ul {
+        position: static;
+        visibility: hidden;
+        padding: 0;
+        box-shadow: none;
+        background-color: #f9f9f9;
+        border-top: 1px solid #eee;
+        opacity: 1;
+    }
+
+    #main-nav ul li ul li {
+        border-bottom-color: #e9e9e9;
+    }
+
+    #main-nav ul li ul li ul li a {
+        padding-left: 45px;
+    }
+
+    #main-nav 
+    .menu-arrow {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        display: block;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        line-height: 38px;
+        text-align: center;
+    }
+
+    #main-nav 
+    .menu-arrow::after {
+        content: "";
+        display: block;
+        width: inherit;
+        height: inherit;
+        background: url(../images/drop-menu.svg) no-repeat center center;
+        transition: all .1s;
+    }
+
+    #main-nav 
+    .menu-arrow.menu-children-visible::after {
+        transform: rotate(180deg);
+    }
+
+    #main-nav ul li:hover > ul {
+        visibility: hidden;
+        animation: none;
+    }
+
+    #main-nav 
+    .menu-item-has-children > ul {
+        position: static;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #main-nav ul 
+    .menu-item-has-children.menu-children-visible > ul {
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+    }
+
+    #main-nav ul li ul:before,
+    #main-nav ul li ul:after {
+        display: none;
+    }
+
+    /*-------------------------------------------*\
+        Featured Posts Styling
+    \*-------------------------------------------*/
+
+    .feat-post-large {
+        height: 380px;
+    }
+
+    .feat-post-large .post-thumb-outer {
+        width: 580px;
+        height: inherit;
+    }
+
+    .feat-post-large-1 .post-content {
+        top: 27px;
+        width: 530px;
+        height: 308px;
+        padding: 34px 30px 0 24px;
+    }
+
+    .feat-post-large-1 .post-content::before {
+        height: 260px;
+    }
+
+    .feat-post-large-1 .category-highlight {
+        margin-bottom: 12px;
+    }
+
+    .feat-post-large-1 .post-title {
+        margin-bottom: 8px;
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .feat-post-large-1 .post-meta {
+        margin-bottom: 10px;
+    }
+
+    .feat-post-large-1 .excerpt {
+        margin-bottom: 17px;
+    }
+
+    /*** Third Homepage Featured Posts ***/
+
+    .feat-post-large-3 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    #featured-posts-three .medium-post {
+        display: none;
+    }
+
+    /*-------------------------------------------*\
+        Recent Posts Styling
+    \*-------------------------------------------*/
+
+    .recent-posts-wrap, .left-wrapper {
+        width: 100%;
+    }
+
+    .medium-post {
+        width: 296px;
+        margin-right: 36px;
+    }
+
+    .medium-post .post-content {
+        width: 236px;
+        padding: 18px 30px 30px;
+    }
+
+    .medium-post .post-content::before {
+        width: 192px;
+    }
+
+    .medium-post.has-post-thumbnail .post-content {
+        width: 206px;
+        padding: 18px 30px 30px;
+    }
+
+    .medium-post.has-post-thumbnail .post-content::before {
+        width: 162px;
+    }
+
+    .medium-post .post-title {
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .recent-posts .medium-post:nth-child(3n),
+    .recent-posts .medium-post:nth-child(2n) {
+        margin-right: 36px;
+    }
+
+    .recent-posts .medium-post:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .recent-posts .medium-post:nth-child(3n+1) {
+        clear: left;
+    }
+
+    /*** Large Posts Styling ***/
+
+    .large-post .post-content {
+        width: 852px;
+    }
+
+    .large-post .post-content::before {
+        width: 704px;
+    }
+
+    .large-posts-center .large-post .post-content::before {
+        width: 514px;
+    }
+
+    .large-post .post-title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    /*-------------------------------------------*\
+        Single Post Styling
+    \*-------------------------------------------*/
+
+    .single-header-center 
+    .single-post-title {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .single-wrap-left,
+    #related-posts {
+        width: 100%;
+        float: none;
+    }
+
+    .single-thumb-center {
+        width: 960px;
+    }
+
+    #related-posts .small-post {
+        width: 428px;
+    }
+
+    .small-post .post-thumb {
+        width: 150px;
+    }
+
+    .small-post.has-post-thumbnail .post-content {
+        width: 260px;
+        padding-top: 15px;
+    }
+
+    .single-wrap-center .about-author::before,
+    .about-author::before {
+        width: 879px;
+    }
+
+    .author-content-bg::before, .author-content-bg::after {
+        width: 49px;
+    }
+
+    form .author-content-bg::before, form .author-content-bg::after {
+        width: 79px;
+    }
+
+    #commentform::before {
+        width: 822px;
+    }
+
+    .comment .author-content-bg::before, .comment .author-content-bg::after {
+        width: 220px;
+    }
+
+    /*-------------------------------------------*\
+        Page Templates Styling
+    \*-------------------------------------------*/
+
+    .page-temp-wrap {
+        margin-bottom: 0;
+    }
+
+    .page-temp-wrap .entry, 
+    #full-width-page, 
+    #full-width-page .entry {
+        margin-bottom: 30px;
+    }
+
+    .entry .wpcf7 {
+        margin-bottom: 24px;
+    }
+
+    /*-------------------------------------------*\
+        WooCommerce Shop Styling
+    \*-------------------------------------------*/
+
+    #shop-with-sidebar {
+        width: 100%;
+        float: none;
+    }
+
+    .shop-post,
+    #shop-with-sidebar .shop-post {
+        width: 294px;
+    }
+
+    #full-width-shop .shop-post:nth-child(4n) {
+        margin-right: 38px;
+    }
+
+    #full-width-shop .shop-post:nth-child(3n),
+    .related.products .shop-post:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    #full-width-shop .shop-post:nth-child(4n+1) {
+        clear: none;
+    }
+
+    /*-------------------------------------------*\
+        Sidebar Styling
+    \*-------------------------------------------*/
+
+    .sidebar-wrap,
+    .main-sidebar {
+        position: static;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .widget-sidebar {
+        width: 100%;
+        float: none;
+        clear: both;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .main-sidebar 
+    .wp-block-image.size-full {
+        text-align: center;
+    }
+
+    .widget #s {
+        width: 722px;
+    }
+
+    .main-sidebar .mc4wp-form {
+        width: 804px;
+    }
+
+    .main-sidebar .mc4wp-form input[type=email], 
+    .main-sidebar .mc4wp-form input[type=text] {
+        width: 428px;
+        padding: 0 30px;
+        clear: both;
+        text-align: left;
+    }
+
+    .widget .small-post .post-thumb {
+        width: 228px;
+    }
+
+    .widget .small-post .post-content,
+    .widget .small-post.has-post-thumbnail .post-content {
+        display: inline-block;
+        width: auto;
+        float: none;
+        padding-top: 20px;
+    }
+
+    .widget .small-post .post-content .post-title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+}
+
+/******************************************************
+    Smaller than 960px
+*******************************************************/
+
+@media screen and (max-width: 960px) {
+
+    .wrapper {
+        width: 700px;
+    }
+
+    #main-header, #main-header.stick-it {
+        width: 640px;
+    }
+
+    #hidden-sidebar .small-post .post-thumb {
+        width: 30%;
+        margin-right: 5%;
+    }
+
+    #hidden-sidebar .small-post.has-post-thumbnail .post-content {
+        width: 54%;
+    }
+
+    #hidden-sidebar .widget .small-post .post-content .post-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    /*-------------------------------------------*\
+        Featured Posts Styling
+    \*-------------------------------------------*/
+
+    .feat-post-large {
+        height: 459px;
+    }
+
+    .feat-post-large .post-thumb-outer {
+        width: 100%;
+    }
+
+    .feat-post-large-1 .category-highlight {
+        margin-bottom: 18px;
+    }
+
+    .feat-post-large-1 .post-content {
+        position: relative;
+        left: auto;
+        top: -20px;
+        width: 600px;
+        padding: 24px 35px 0;
+        margin: 0 auto;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .feat-post-large-1 .post-content::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: -16px;
+        display: block;
+        width: 566px;
+        height: 20px;
+        padding: 0 20px;
+        margin: 0 auto;
+        background: url(../images/post-con-bg.svg) repeat-x top left;
+    }
+
+    .post-content-bg-y::before, 
+    .post-content-bg-y::after {
+        content: "";
+        position: absolute;
+        left: auto;
+        display: block;
+        width: 32px;
+        height: 16px;
+        background-color: #fff;
+    }
+
+    .post-content-bg-y::before {
+        left: 0;
+        top: -16px;
+        border-radius: 10px 0 0 0;
+    }
+
+    .post-content-bg-y::after {
+        right: 0;
+        top: -16px;
+        border-radius: 0 10px 0 0;
+    }
+
+    /*** Featured Post Two & Three Styling ***/
+
+    #featured-post-two {
+        margin-bottom: 52px;
+    }
+
+    .feat-post-large-3 {
+        height: auto;
+    }
+
+    /*-------------------------------------------*\
+        Recent Posts Styling
+    \*-------------------------------------------*/
+
+    .medium-post {
+        width: 214px;
+        margin-right: 29px;
+        margin-bottom: 40px;
+    }
+ 
+    .recent-posts .medium-post:nth-child(2n) {
+        margin-right: 29px;
+    }
+
+    .recent-posts .medium-post:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .medium-post.has-post-thumbnail .post-content {
+        width: 146px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .medium-post.has-post-thumbnail .post-content::before {
+        width: 82px;
+    }
+
+    .medium-post .post-content {
+        width: 164px;
+        padding: 18px 25px 30px;
+    }
+
+    .medium-post .post-content::before {
+        width: 123px;
+    }
+
+    .medium-post .post-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    article.sticky.medium-post .post-title a::before {
+        top: -3px;
+        padding-left: 24px;
+    }
+
+    .medium-post .post-date {
+        padding-left: 22px;
+    }
+
+    .medium-post .post-date::before {
+        width: 17px;
+    }
+
+    .medium-post .play-txt {
+        display: none;
+    }
+
+    .pagination {
+        margin-left: 0;
+    }
+
+    /*** Large Posts Styling ***/
+
+    .large-post .post-thumb-outer, .large-post .post-thumb {
+        height: 458px;
+    }
+
+    .large-post .post-content {
+        width: 600px;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+
+    .large-post .post-content::before {
+        width: 496px;
+    }
+
+    .large-posts-center .recent-posts-wrap {
+        width: 100%;
+    }
+
+    .large-posts-center .large-post .post-content {
+        width: 600px;
+        margin-left: 15px;
+    }
+
+    /*-------------------------------------------*\
+        Sidebar Styling
+    \*-------------------------------------------*/
+
+    .sidebar-wrap,
+    .main-sidebar {
+        width: 100%;
+    }
+
+    .widget #s {
+        width: 558px;
+    }
+
+    .main-sidebar .mc4wp-form {
+        width: 90%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .main-sidebar .mc4wp-form input[type=email], 
+    .main-sidebar .mc4wp-form input[type=text] {
+        text-align: center;
+    }
+
+    .widget .small-post .post-content,
+    .widget .small-post.has-post-thumbnail .post-content {
+        width: 450px;
+    }
+
+    /*-------------------------------------------*\
+        Single Post Styling
+    \*-------------------------------------------*/
+
+    .single-thumb-center,
+    .single-header-center, 
+    .single-wrap-center {
+        width: 700px;
+    }
+
+    .single-post-title {
+        font-size: 34px;
+        line-height: 44px;
+    }
+
+    .single-wrap-center .about-author::before, .about-author::before {
+        width: 632px;
+    }
+
+    #related-posts .small-post {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #related-posts .small-post:last-child {
+        margin-bottom: 39px;
+    }
+
+    #related-posts .small-post .post-thumb {
+        width: 190px;
+    }
+
+    #related-posts .small-post.has-post-thumbnail .post-content {
+        width: 490px;
+    }
+
+    #commentform::before {
+        width: 640px;
+    }
+
+    .comment.depth-2 #commentform::before,
+    .comment.depth-3 #commentform::before {
+        width: 334px;
+    }
+
+    .comment.depth-2 .author-content-bg::before, 
+    .comment.depth-2 .author-content-bg::after,
+    .comment.depth-3 .author-content-bg::before, 
+    .comment.depth-3 .author-content-bg::after {
+        width: 100px;
+    }
+
+    /*-------------------------------------------*\
+        Contact Form Styling
+    \*-------------------------------------------*/
+
+    .wpcf7-textarea {
+        width: 686px;
+    }
+
+    /*-------------------------------------------*\
+        WooCommerce Shop Styling
+    \*-------------------------------------------*/
+
+    .shop-post, 
+    #shop-with-sidebar .shop-post {
+        width: 208px;
+    }
+
+    .woocommerce div.product div.images, 
+    .woocommerce div.product div.summary {
+        margin-bottom: 6px;
+    }
+
+    .product_meta {
+        margin-bottom: 34px;
+    }
+
+}
+
+/******************************************************
+    Smaller than 700px
+*******************************************************/
+
+@media screen and (max-width: 700px) {
+
+    .wrapper {
+        width: 320px;
+    }
+
+    /*-------------------------------------------*\
+        Main Header Styling
+    \*-------------------------------------------*/
+
+    #main-header-wrap {
+        height: auto;
+    }
+
+    #main-header, #main-header.stick-it {
+        width: 280px;
+        padding: 10px 20px;
+    }
+
+    #menu-icon {
+        position: absolute;
+        left: 20px;
+        top: 112px;
+        height: 20px;
+    }
+
+    #main-nav {
+        left: 0;
+        top: 99%;
+        width: 320px;
+    }
+
+    #logo-wrap {
+        height: 90px;
+    }
+
+    .site-logo {
+        line-height: 90px;
+    }
+
+    #main-header 
+    .site-logo img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .site-text-logo {
+        padding-top: 20px;
+    }
+
+    .site-text-logo h1 {
+        font-size: 29px;
+        line-height: 33px;
+    }
+
+    #logo-wrap {
+        max-width: 90%;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+    }
+
+    #header-search-icon {
+        margin-top: 9px;
+    }
+
+    #header-elements .dark-light-icons,
+    #hidden-sidebar-icon {
+        margin-top: 7px;
+    }
+
+    #shopping-cart-li {
+        margin-top: 11px;
+    }
+
+    #modal-search-inner {
+        width: 74%;
+    }
+
+    #modal-search #searchform {
+        height: 84px;
+    }
+
+    #modal-search #s {
+        font-size: 28px;
+    }
+
+    #hidden-sidebar-wrap {
+        width: 340px;
+    }
+
+    .hidden-sidebar-close {
+        right: 5%;
+    }
+
+    #hidden-sidebar-wrap .widget-sidebar {
+        width: 90%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    /*-------------------------------------------*\
+        Featured Posts Styling
+    \*-------------------------------------------*/
+
+    .feat-post-large .post-thumb-outer {
+        height: 210px;
+    }
+    
+    .feat-post-large-1 .post-content {
+        width: 230px;
+        height: auto;
+        padding-right: 25px;
+        padding-bottom: 30px;
+        padding-left: 25px;
+    }
+
+    .feat-post-large-1 .post-content::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .feat-post-large-1 .post-content::before {
+        width: 166px;
+    }
+
+    .feat-post-large-1 .post-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .post-content-bg-y::before, .post-content-bg-y::after {
+        width: 37px;
+    }
+
+    #featured-post .feat-post .feat-share,
+    #featured-post-two .feat-post .feat-share {
+        display: none;
+    }
+
+    .mobile-feat-share, .mobile-feat-share .feat-share {
+        display: block;
+    }
+
+    #featured-post .mobile-feat-share .feat-share a {
+        margin-top: -6px;
+    }
+
+    #featured-post .mobile-feat-share .feat-share .twitter {
+        margin-top: -5px;
+    }
+
+    .large-post .post-content {
+        width: 230px;
+    }
+
+    .large-post .post-thumb-outer, .large-post .post-thumb {
+        height: 210px;
+    }
+
+    .large-post .post-content {
+        padding: 16px 25px 30px;
+    }
+
+    .large-post .post-content::before {
+        width: 64px;
+    }
+
+    .large-post .post-title {
+        margin-bottom: 9px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .large-post .post-meta {
+        margin-bottom: 12px;
+    }
+
+    .large-post .post-content-bg::before,
+    .large-post .post-content-bg::after {
+        width: 40px;
+    }
+
+    #featured-posts-three {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    .feat-post-large-3.feat-post-large .post-thumb-outer {
+        height: auto;
+    }
+
+    /*-------------------------------------------*\
+        Recent Posts Styling
+    \*-------------------------------------------*/
+
+    .medium-post {
+        width: 100%;
+        float: none;
+        clear: both;
+    }
+
+    .medium-post .post-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .medium-post.has-post-thumbnail .post-content {
+        width: 250px;
+    }
+
+    .medium-post.has-post-thumbnail .post-content::before {
+        width: 197px;
+    }
+
+    .medium-post .post-content {
+        width: 270px;
+    }
+
+    .medium-post .post-content::before {
+        width: 240px;
+    }
+
+    .medium-post .post-content-bg::before,
+    .medium-post .post-content-bg::after {
+        width: 30px;
+    }
+
+    .play-txt,
+    .medium-post .play-txt {
+        display: block;
+    }
+
+    /*** Large Posts Styling ***/
+
+    .large-posts-center .large-post {
+        margin-bottom: 40px;
+    }
+
+    .large-posts-center .large-post .post-content {
+        width: 240px;
+    }
+
+    .large-posts-center .large-post .post-content::before {
+        width: 74px;
+    }
+
+    .load-more {
+        margin-bottom: 50px;
+    }
+
+    /*-------------------------------------------*\
+        Single Post Styling
+    \*-------------------------------------------*/
+
+    .single-thumb-center, .single-header-center, 
+    .single-wrap-center {
+        width: 320px;
+    }
+
+    .single-header-center .single-post-title, 
+    .single-wrap-left .single-post-title,
+    .single-post-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .single-wrap-center .about-author::before, .about-author::before {
+        width: 200px;
+    }
+
+    .tagcloud.single-tags {
+        float: left;
+        margin-bottom: 40px;
+    }
+
+    #related-posts .small-post .post-thumb,
+    #related-posts .small-post.has-post-thumbnail .post-content {
+        width: 100%;
+        float: none;
+    }
+
+    #related-posts 
+    .small-post.has-post-thumbnail .post-content {
+        padding-top: 21px;
+    }
+
+    #related-posts .post-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .entry blockquote p, 
+    .wp-block-pullquote p, 
+    .entry .wp-block-quote.is-large p, 
+    .entry .wp-block-quote.is-style-large p, 
+    .comment-text blockquote p, 
+    .wp-block-pullquote.is-style-solid-color blockquote p {
+        font-size: 20px;
+        line-height: 1.22em;
+    }
+
+    /*** Tables Styling ***/
+
+    .entry table td, 
+    .entry table th, 
+    .comment table td, 
+    .comment table th, 
+    .wp-block-table.is-style-stripes td, 
+    .wp-block-table.is-style-stripes th {
+        word-break: break-all;
+    }
+
+    /*** Entry Headings Resizing ***/
+
+    .entry h1, 
+    .entry h2, 
+    .entry h3, 
+    .comment-text h1, 
+    .comment-text h2, 
+    .comment-text h3,
+    .page-main-title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    /*** Comments Section Styling ***/
+
+    .comment .children {
+        margin-left: 54px;
+    }
+
+    #author, #email, #url {
+        width: 50%;
+    }
+
+    #comment {
+        width: 95.4%;
+    }
+
+    #commentform::before {
+        width: 122px;
+    }
+
+    /*-------------------------------------------*\
+        Media Player Styling
+    \*-------------------------------------------*/
+
+    #audio-player-large,
+    .player-content {
+        width: 366px;
+    }
+
+    #audio-player-large.is-external-player, 
+    #audio-player-large.is-external-player .player-content {
+        width: 340px;
+        height: 194px;
+    }
+
+    #audio-player-large.is-external-player::after {
+        top: 70px;
+    }
+
+    #audio-player-large 
+    .mejs-container.mejs-audio {
+        width: 366px !important;
+    }
+
+    /*-------------------------------------------*\
+        Contact Form / Error Page Styling
+    \*-------------------------------------------*/
+
+    .main-page-heading {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .wpcf7-textarea {
+        width: 300px;
+    }
+
+    /*** Error Page ***/
+
+    .error-content-wrap,
+    .error-content-wrap.nothing-found {
+        margin: 90px 0;
+    }
+
+    .error-content-wrap h1 {
+        font-size: 38px;
+    }
+
+    .error-content-wrap.nothing-found h1 {
+        font-size: 32px;
+    }
+
+    .error-content-wrap h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .error-wrap #searchform {
+        width: 100%;
+    }
+
+    .error-wrap #s {
+        width: 168px;
+        text-align: center;
+    }
+
+    .error-wrap #searchsubmit {
+        margin-top: 8px;
+    }
+
+    /*-------------------------------------------*\
+        WooCommerce Shop Styling
+    \*-------------------------------------------*/
+
+    .woocommerce .woocommerce-ordering, 
+    .woocommerce-page .woocommerce-ordering {
+        float: left;
+    }
+
+    .shop-post, 
+    #shop-with-sidebar .shop-post {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .wc-block-grid.has-3-columns 
+    .wc-block-grid__product {
+        max-width: 90%;
+    }
+
+    .woocommerce div.product form.cart .variations label {
+        margin-right: 5px;
+    }
+
+    .woocommerce-cart table.cart 
+    td.actions .coupon .input-text {
+        width: 126px;
+    }
+
+    /*-------------------------------------------*\
+        Sidebar Styling
+    \*-------------------------------------------*/
+
+    .widget #s {
+        width: 178px;
+    }
+
+    .main-sidebar .mc4wp-form input[type=email], 
+    .main-sidebar .mc4wp-form input[type=text] {
+        width: 226px;
+    }
+
+    .widget .small-post .post-thumb {
+        width: 128px;
+    }
+
+    .widget .small-post .post-content,
+    .widget .small-post.has-post-thumbnail .post-content {
+        padding-top: 0;
+    }
+
+    .widget .small-post .post-content,
+    .widget .small-post.has-post-thumbnail .post-content {
+        width: 166px;
+    }
+
+    .widget .small-post .post-content .post-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    #wp-calendar {
+        table-layout: fixed;
+    }
+
+    /*-------------------------------------------*\
+        Main Footer Styling
+    \*-------------------------------------------*/
+
+    .xenon-email-wrap {
+        width: 100%;
+        height: 100px;
+    }
+
+    #newsletter-sub h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #newsletter-sub .xenon-email-wrap p:first-child input,
+    #newsletter-sub .xenon-email-wrap p:nth-child(2) input {
+        border-radius: 10px;
+    }
+
+    /*** Back To Top Styling ***/
+
+    #back-to-top {
+        right: 4px;
+        bottom: 40px;
+    }
+
+}
+
+/******************************************************
+    Smaller than 330px
+*******************************************************/
+
+@media screen and (max-width: 330px) {
+
+    .wrapper {
+        width: 280px;
+    }
+
+    /*-------------------------------------------*\
+        Main Header Styling
+    \*-------------------------------------------*/
+
+    .home-layout-three #main-header-wrap {
+        padding: 40px 0;
+    }
+
+    #main-header-wrap {
+        margin: 40px 0;
+    }
+
+    #main-header, #main-header.stick-it {
+        width: 240px;
+    }
+
+    #main-nav {
+        top: 97%;
+        width: 280px;
+    }
+
+    #hidden-sidebar-wrap {
+        width: 300px;
+    }
+
+    /*-------------------------------------------*\
+        Featured Posts Styling
+    \*-------------------------------------------*/
+
+    .feat-post-large-1 {
+        margin-bottom: 50px;
+    }
+
+    .feat-post-large .post-thumb-outer {
+        height: 182px;
+    }
+
+    .feat-post-large-1 .category-highlight {
+        margin-bottom: 12px;
+    }
+
+    .feat-post-large-1 .post-content {
+        width: 210px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .feat-post-large .feat-share li:nth-child(4) {
+        display: none;
+    }
+
+    .large-post .post-thumb-outer, .large-post .post-thumb {
+        height: 184px;
+    }
+
+    .large-post .post-content {
+        width: 200px;
+    }
+
+    #featured-post-two {
+        margin-bottom: 40px;
+    }
+
+    /*-------------------------------------------*\
+        Recent Posts Styling
+    \*-------------------------------------------*/
+
+    .medium-post.has-post-thumbnail .post-content {
+        width: 210px;
+    }
+
+    .medium-post.has-post-thumbnail .post-content::before {
+        width: 158px;
+    }
+
+    .medium-post .post-content {
+        width: 230px;
+    }
+
+    .medium-post .post-title {
+        font-size: 19px;
+        line-height: 25px;
+    }
+
+    .post-content-bg-y::before, .post-content-bg-y::after {
+        width: 32px;
+    }
+
+    .pagination a, 
+    .post-nav-links a,
+    .pagination .current, 
+    .post-nav-links .current {
+        margin-right: 4px;
+    }
+
+    .pagination .dots, 
+    .post-nav-links .dots {
+        margin-right: 14px;
+        margin-bottom: 6px;
+    }
+
+    /*** Large Posts Styling ***/
+
+    .large-post {
+        margin-bottom: 40px;
+    }
+
+    .large-post .post-content::before {
+        width: 34px;
+    }
+
+    .large-posts-center .large-post .post-content {
+        width: 200px;
+    }
+
+    .large-posts-center .large-post .post-content::before {
+        width: 34px;
+    }
+
+    /*-------------------------------------------*\
+        Single Post Styling
+    \*-------------------------------------------*/
+
+    .single-wrap-left .single-thumb {
+        margin-bottom: 18px;
+    }
+
+    .single-post-title {
+        margin-bottom: 14px;
+    }
+
+    .single-wrap-center {
+        width: 100%;
+    }
+
+    .single-header-center .single-post-title, 
+    .single-wrap-left .single-post-title, 
+    .single-post-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .single-thumb-center, .single-header-center, .single-wrap-center {
+        width: 280px;
+    }
+
+    .single-thumb {
+        margin-bottom: 30px;
+    }
+
+    .single-post-meta li {
+        margin-bottom: 16px;
+    }
+
+    .single-share-icons {
+        font-size: 12px;
+    }
+
+    .single-share-icons li {
+        margin-right: 6px;
+    }
+
+    .about-author {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .author-avatar {
+        display: inline-block;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+
+    .author-icons {
+        display: inline-block;
+    }
+
+    .author-icons li:last-child {
+        margin-right: 0;
+    }
+
+    #related-posts .medium-post, 
+    .single-wrap-center #related-posts .medium-post {
+        width: 100%;
+    }
+
+    #related-posts .post-title {
+        font-size: 19px;
+        line-height: 23px;
+    }
+
+    #commentform::before {
+        width: 82px;
+    }
+
+    /*-------------------------------------------*\
+        Media Player Styling
+    \*-------------------------------------------*/
+
+    #audio-player-large,
+    .player-content {
+        width: 280px;
+    }
+
+    .player-thumb {
+        width: 70px;
+        height: 70px;
+    }
+
+    #audio-player-large 
+    .mejs-container.mejs-audio {
+        width: inherit !important;
+    }
+
+    #audio-player-large.is-external-player, 
+    #audio-player-large.is-external-player .player-content {
+        width: 280px;
+        height: 164px;
+    }
+
+    #audio-player-large.is-external-player::after {
+        top: 56px;
+    }
+
+    /*-------------------------------------------*\
+        Pagination Styling
+    \*-------------------------------------------*/
+
+    .pagination {
+        margin-bottom: 40px;
+    }
+
+    /*-------------------------------------------*\
+        Contact Form / Error Page Styling
+    \*-------------------------------------------*/
+
+    .wpcf7-text,
+    .wpcf7-textarea {
+        width: 226px;
+    }
+
+    .page-temp-wrap .entry, #full-width-page, 
+    #full-width-page .entry,
+    .entry .wpcf7 {
+        margin-bottom: 30px;
+    }
+
+    .error-content-wrap {
+        margin: 80px 0;
+    }
+
+    .error-wrap #s {
+        width: 105px;
+        padding-left: 10px;
+    }
+
+    .error-wrap #searchsubmit {
+        right: 4px;
+    }
+
+    /*-------------------------------------------*\
+        WooCommerce Shop Styling
+    \*-------------------------------------------*/
+
+    .woocommerce .woocommerce-result-count {
+        margin-bottom: 26px;
+        font-size: 16px;
+    }
+
+    .woocommerce .woocommerce-breadcrumb {
+        margin-bottom: 34px;
+    }
+
+    /*-------------------------------------------*\
+        Sidebar Styling
+    \*-------------------------------------------*/
+
+    .section-heading, 
+    .widget-sidebar .wp-block-group__inner-container h2:first-of-type {
+        font-size: 19px;
+    }
+
+    .widget #s {
+        width: 114px;
+        padding-right: 20px;
+    }
+
+    .widget #searchsubmit, 
+    .entry .wp-block-search .wp-block-search__button {
+        padding: 0 12px;
+    }
+
+    .widget .mc4wp-form h1, 
+    .widget .mc4wp-form h2, 
+    .widget .mc4wp-form h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .widget .mc4wp-form input[type=email],
+    .widget .mc4wp-form input[type=text] {
+        width: 150px;
+    }
+
+    .widget .mc4wp-form input[type=submit] {
+        width: 190px;
+    }
+
+    .widget_calendar {
+        font-size: 14px;
+    }
+
+    #wp-calendar tbody td, #wp-calendar .pad {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    .widget .small-post .post-thumb {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .widget .small-post .post-content,
+    .widget .small-post.has-post-thumbnail .post-content {
+        width: 100%;
+    }
+
+    .widget .small-post .post-content .post-title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    /*-------------------------------------------*\
+        Main Footer Styling
+    \*-------------------------------------------*/
+
+    #newsletter-sub input[type=email],
+    #newsletter-sub input[type=text] {
+        width: 234px;
+        text-align: center;
+    }
+
+    #footer-social li {
+        margin-right: 18px;
+    }
+
+    #footer-social a {
+        padding: 8px;
+    }
+
+}
+
+/******************************************************
+    Smaller than 240px
+*******************************************************/
+
+@media screen and (max-width: 240px) {
+
+    .wrapper {
+        width: 220px;
+    }
+
+    select {
+        max-width: 96%;
+    }
+
+    /*-------------------------------------------*\
+        Main Header Styling
+    \*-------------------------------------------*/
+
+    #main-header, #main-header.stick-it {
+        width: 180px;
+    }
+
+    .site-text-logo {
+        margin-top: 8px;
+    }
+
+    #menu-icon {
+        position: absolute;
+    }
+
+    #main-nav {
+        width: 220px;
+    }
+
+    #header-elements li {
+        margin-left: 4px;
+    }
+
+    #header-elements li:last-child {
+        margin-left: 0;
+    }
+
+    #header-elements li#shopping-cart-li {
+        margin-left: 20px;
+    }
+
+    #header-elements .dark-light-icons {
+        margin-left: 14px;
+    }
+
+    #hidden-sidebar-wrap {
+        width: 232px;
+    }
+
+    /*-------------------------------------------*\
+        Featured Posts Styling
+    \*-------------------------------------------*/
+
+    .featured-area {
+        margin-bottom: 50px;
+    }
+
+    .feat-post-large-1 .post-content {
+        width: 164px;
+    }
+
+    .feat-post-large-1 .post-content::before {
+        width: 90px;
+    }
+
+    .feat-post-large .post-thumb-outer {
+        height: 142px;
+    }
+
+    .feat-post-large-1 .post-title {
+        font-size: 19px;
+        line-height: 25px;
+    }
+
+    .large-post .post-thumb-outer, .large-post .post-thumb {
+        height: 142px;
+    }
+
+    .large-post .post-content::before {
+        width: 24px;
+    }
+
+    .large-post .post-content-bg::before, .large-post .post-content-bg::after {
+        width: 24px;
+    }
+
+    /*-------------------------------------------*\
+        Recent Posts Styling
+    \*-------------------------------------------*/
+
+    .medium-post .post-content {
+        width: 170px;
+    }
+
+    .medium-post .post-content::before {
+        width: 120px;
+    }
+
+    .medium-post.has-post-thumbnail .post-content {
+        width: 150px;
+    }
+
+    .medium-post.has-post-thumbnail .post-content::before {
+        width: 90px;
+    }
+
+    .med-share-wrap .med-share-btn,
+    .feat-share {
+        display: none;
+    }
+
+    .large-post {
+        margin-bottom: 35px;
+    }
+
+    .large-post .post-content {
+        width: 140px;
+    }
+
+    .large-post .post-title {
+        font-size: 19px;
+        line-height: 25px;
+    }
+
+    .large-posts-center .large-post .post-content {
+        width: 150px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .large-posts-center .large-post .post-content::before {
+        width: 26px;
+    }
+
+    /*-------------------------------------------*\
+        Single Post Styling
+    \*-------------------------------------------*/
+
+    #comment {
+        width: 94.2%;
+    }
+
+    /*-------------------------------------------*\
+        Media Player Styling
+    \*-------------------------------------------*/
+
+    #audio-player-large, .player-content {
+        width: 192px;
+    }
+
+    #audio-player-large.is-external-player, 
+    #audio-player-large.is-external-player .player-content {
+        width: 192px;
+        height: 112px;
+    }
+
+    #audio-player-large.is-external-player::after {
+        top: 34px;
+    }
+
+    /*-------------------------------------------*\
+        Contact Form / Error Page Styling
+    \*-------------------------------------------*/
+
+    .wpcf7-text, .wpcf7-textarea {
+        width: 200px;
+    }
+
+    .error-wrap #s {
+        width: 106px;
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    .error-wrap #searchsubmit {
+        padding: 0 14px;
+    }
+
+    /*-------------------------------------------*\
+        Sidebar Styling
+    \*-------------------------------------------*/
+
+    .widget #s, 
+    .entry .wp-block-search 
+    .wp-block-search__input {
+        padding-right: 71px;
+        padding-left: 10px;
+    }
+
+    .widget .mc4wp-form input[type=email],
+    .widget .mc4wp-form input[type=text] {
+        width: 128px;
+    }
+
+    .widget .mc4wp-form input[type=submit] {
+        width: 172px;
+    }
+
+    #wp-calendar tbody td,
+    #wp-calendar .pad {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    /*-------------------------------------------*\
+        Main Footer Styling
+    \*-------------------------------------------*/
+
+    #newsletter-sub h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    #newsletter-sub input[type=email], #newsletter-sub input[type=text] {
+        width: 170px;
+    }
+
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title> YOtrack</title><link rel="icon" href="media/images/logo/2.png" type="image/x-icon"  > 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css"> 
+    <script>
+        // Function to play a local video
+        function playLocalVideo(videoUrl) {
+            var videoPlayer = document.getElementById("videoPlayer");
+            var videoContainer = document.getElementById("videoContainer");
+
+            // Hide videoContainer in case YouTube video was previously playing
+            videoContainer.innerHTML = '';
+
+            // Create video element for local video
+            var video = document.createElement('video');
+            video.src = videoUrl;
+            video.width = "100%";
+            video.controls = true;
+            video.autoplay = true;
+            video.controlsList = "nodownload";
+            video.oncontextmenu = function() { return false; };
+
+            // Append video element to videoContainer
+            videoContainer.appendChild(video);
+
+            // Show the video player
+            videoPlayer.style.display = "block";
+        }
+
+        // Function to play a YouTube video
+        function playYouTubeVideo(videoId) {
+            var videoPlayer = document.getElementById("videoPlayer");
+            var videoContainer = document.getElementById("videoContainer");
+
+            // Hide videoContainer in case local video was previously playing
+            videoContainer.innerHTML = '';
+
+            // Create YouTube iframe
+            var iframe = document.createElement('iframe');
+            iframe.src = "https://www.youtube.com/embed/" + videoId;
+            iframe.width = "100%";
+            iframe.height = "100%";
+            iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+
+            // Append iframe to videoContainer
+            videoContainer.appendChild(iframe);
+
+            // Show the video player
+            videoPlayer.style.display = "block";
+        }
+
+        // Function to stop the video and hide the player
+        function stopVideo() {
+            var videoPlayer = document.getElementById("videoPlayer");
+
+            // Hide the video player
+            videoPlayer.style.display = "none";
+
+            // Stop YouTube video if it's playing
+            var youtubePlayer = document.getElementById("videoContainer").querySelector("iframe");
+            if (youtubePlayer) {
+                youtubePlayer.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+            }
+
+            // Stop local video if it's playing
+            var localVideo = document.getElementById("videoContainer").querySelector("video");
+            if (localVideo) {
+                localVideo.pause();
+                localVideo.currentTime = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<!-- Custom Video Player -->
+<div class="video-player" id="videoPlayer" >
+    <div id="videoContainer"></div> <!-- This is where the video will be embedded -->
+
+    <img src="media/images/close.png" class="close-btn" onclick="stopVideo()" alt="">
+</div> 
+<!-- End of Custom Video Player -->
+
+<!-- Play Button for Local Video -->
+<img alt="" class="play-btn" src="media/images/play.png" onclick="playLocalVideo('media/videos/african_hits/y2mate.com - Bien ft Scar Mkadinali  Lifestyle Official Audio_480p.mp4')">
+
+<!-- Play Button for YouTube Video -->
+<img alt="" class="play-btn" src="media/images/play.png" onclick="playYouTubeVideo('aPUVUrS2oC0')">
+
+</body>
+
