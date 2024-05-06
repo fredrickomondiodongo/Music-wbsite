@@ -121,15 +121,15 @@ p{
     width: 750px;
     position: fixed;
     left: 50%;
-    top: 60%;
+    top: 70%;
     transform: translate(-50%, -50%);
     display: none;
     z-index: 1000;
      padding: 10px;
    
-   
-   
    }
+
+
   
 .video-player > video{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -137,14 +137,116 @@ p{
 }
 .close-btn{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 140px;
     width: 30px;
     cursor: pointer;
+   
 }
 
+iframe{
+    border-radius: 20px;
+    width :600px;
+    height :300px;
+}
+@media (max-width:991px){
+    iframe{
+        width: 500px;
+        
+    }
+    .video-player{
+        left: 60%;
+    }
 
+    .close-btn{
+        right: 240px;
+    }
 
+}
+
+@media (max-width:850px){
+     .close-btn{
+        right: 80px;
+    }
+}
+
+@media (max-width:770px){
+    .close-btn{
+        right: -20px;
+        top: px;
+    }
+
+    .video-player{
+        left: 50%;
+    }
+}
+
+@media (max-width:600px){
+    iframe{
+        width: 400px;
+        height: 250px;
+
+        
+    }
+    .close-btn{
+        right: 90px;
+        top: px;
+    }
+    .video-player{
+        left: 60%;
+    }
+
+}
+
+@media (max-width:520px){
+    .close-btn{
+        right: 1px;
+        top:1px;
+    }
+    .video-player{
+        left: 50%;
+    }
+}
+@media (max-width:450px){
+    iframe{
+        width: 350px;
+        height: 250px;
+    }
+     .close-btn{
+        right: 37px;
+        top:1px;
+    }
+
+}
+@media (max-width:410px){
+    iframe{
+        width: 300px;
+        height: 250px;
+    }
+    .close-btn{
+        right: 7px;
+        top:1px;
+    }
+}
+
+@media (max-width:330px){
+    .close-btn{
+        right:28px;
+        top:1px;
+    }
+    .video-player{
+        left: 55%;
+    }
+    iframe{
+        width: 250px;}
+}
+#floatingIcon {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    z-index: 1001; /* Ensure the icon appears above other content */
+    cursor: pointer;
+}
 
 
 /*---------------------navbar styles--------------------------*/
@@ -189,6 +291,10 @@ p{
 
 .text-white a{
     text-decoration: none;
+}
+
+.dropdown-menu {
+    z-index: 1100; /* Ensure the dropdown menu is above the video player */
 }
 
 .hero-area{
